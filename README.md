@@ -26,7 +26,8 @@ Pengembangan TeachSign berkontribusi pada pencapaian tujuan pembangunan berkelan
 
 ## 👨‍👩‍👧‍👦 Target Pengguna
 
-* **Masyarakat Umum** (Pemula yang ingin mempelajari bahasa isyarat dari dasar).
+* **Masyarakat Umum**
+* **Masyarakat Unpad**
 
 ---
 
