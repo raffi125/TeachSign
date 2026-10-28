@@ -33,7 +33,7 @@ Pengembangan TeachSign berkontribusi pada pencapaian tujuan pembangunan berkelan
 
 ## 🖼️ Mockup Tampilan
 
-*(Tambahkan URL gambar mockup atau lampirkan berkas gambar di folder repositori)*
+![Mockup TeachSign](./mockup.png)
 
 ---
 
