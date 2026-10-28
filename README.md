@@ -93,3 +93,7 @@ Sistem ini menggunakan **4 tabel utama** untuk mengelola seluruh data pengguna, 
 | `lesson_id`    | `INT` / `UUID` | **Foreign Key** → `lessons.id`   |
 | `score`        | `INT`          | Skor kuis/game                   |
 | `completed_at` | `TIMESTAMP`    | Waktu selesai                    |
+
+## 🗄️ ERD
+
+![ERD TeachSign](./erd.png)
