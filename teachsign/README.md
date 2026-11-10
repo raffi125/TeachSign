@@ -193,6 +193,75 @@ Pemeriksaan kode:
 - Gunakan `php artisan migrate:fresh --seed` bila boleh menimpa data.
 - Pastikan internet tersedia untuk CDN.
 
+# Flow Chart
+```mermaid
+flowchart TD
+    %% ENTITAS
+    Users[users]
+    Lessons[lessons]
+    Quizzes[quizzes]
+    Games[games]
+
+    %% RELASI (Belah Ketupat)
+    Rel_Membuat{Membuat}
+    Rel_Mengunci{Mengunci}
+    Rel_Memiliki{Memiliki}
+    Rel_PunyaSkor{Punya Skor}
+
+    %% KARDINALITAS DAN HUBUNGAN ENTITAS-RELASI
+    Users -- "1" --- Rel_Membuat
+    Rel_Membuat -- "N" --- Lessons
+
+    Users -- "1" --- Rel_Mengunci
+    Rel_Mengunci -- "N" --- Quizzes
+
+    Lessons -- "1" --- Rel_Memiliki
+    Rel_Memiliki -- "N" --- Quizzes
+
+    Users -- "1" --- Rel_PunyaSkor
+    Rel_PunyaSkor -- "N" --- Games
+
+    %% ATRIBUT USERS
+    Users --- u_id([<u>id</u>])
+    Users --- u_username([username])
+    Users --- u_email([email])
+    Users --- u_pwd([password_hash])
+    Users --- u_role([role])
+    Users --- u_cat([created_at])
+    Users --- u_uat([updated_at])
+
+    %% ATRIBUT LESSONS
+    Lessons --- l_id([<u>id</u>])
+    Lessons --- l_title([title])
+    Lessons --- l_cat([category])
+    Lessons --- l_url([media_url])
+    Lessons --- l_desc([description])
+    Lessons --- l_cat_at([created_at])
+    Lessons --- l_uat_at([updated_at])
+
+    %% ATRIBUT QUIZZES
+    Quizzes --- q_id([<u>id</u>])
+    Quizzes --- q_title([title])
+    Quizzes --- q_q([questions])
+    Quizzes --- q_att([attempts])
+    Quizzes --- q_lock([is_locked])
+    Quizzes --- q_unl([unlock_at])
+    Quizzes --- q_vis([is_score_visible])
+    Quizzes --- q_dur([duration_seconds])
+    Quizzes --- q_cat_at([created_at])
+    Quizzes --- q_uat_at([updated_at])
+
+    %% ATRIBUT GAMES
+    Games --- g_id([<u>id</u>])
+    Games --- g_mode([mode])
+    Games --- g_word([word])
+    Games --- g_active([is_active])
+    Games --- g_score([score])
+    Games --- g_cat_at([created_at])
+    Games --- g_uat_at([updated_at])
+```
+
+
 ## ERD
 
 ```mermaid
