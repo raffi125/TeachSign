@@ -271,9 +271,9 @@ flowchart TD
 ```mermaid
 erDiagram
     users ||--o{ lessons : "membuat (created_by)"
-    users ||--o{ quizzes : "mengunci (locked_by)"
+    users |o--o{ quizzes : "mengunci (locked_by)"
     lessons ||--o{ quizzes : "memiliki (lesson_id)"
-    users ||--o{ games : "punya skor (user_id nullable)"
+    users |o--o{ games : "punya skor (user_id nullable)"
 
     users {
         bigint id PK
