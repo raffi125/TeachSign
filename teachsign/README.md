@@ -212,13 +212,13 @@ flowchart TD
     Users -- "1" --- Rel_Membuat
     Rel_Membuat -- "N" --- Lessons
 
-    Users -- "1" --- Rel_Mengunci
+    Users -- "0..1" --- Rel_Mengunci
     Rel_Mengunci -- "N" --- Quizzes
 
     Lessons -- "1" --- Rel_Memiliki
     Rel_Memiliki -- "N" --- Quizzes
 
-    Users -- "1" --- Rel_PunyaSkor
+    Users -- "0..1" --- Rel_PunyaSkor
     Rel_PunyaSkor -- "N" --- Games
 
     %% ATRIBUT USERS
